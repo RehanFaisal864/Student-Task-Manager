@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Task Management System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <h1>Student Task Management System-LMS-NUML</h1>
+        <p>Add and manage your academic tasks</p>
+    </header>
+
+    <main class="container">
+        <section class="task-form">
+            <h2>Add New Task</h2>
+
+            <form id="taskForm">
+                <label for="taskTitle">Task Title</label>
+                <input
+                    type="text"
+                    id="taskTitle"
+                    placeholder="Enter task title"
+                >
+
+                <label for="taskDescription">Task Description</label>
+                <textarea
+                    id="taskDescription"
+                    placeholder="Enter task description"
+                ></textarea>
+
+                <!-- NEW: priority field -->
+                <label for="taskPriority">Priority</label>
+                <select id="taskPriority">
+                    <option value="High">High</option>
+                    <option value="Medium" selected>Medium</option>
+                    <option value="Low">Low</option>
+                </select>
+
+                <button type="submit">Add Task to be done</button>
+            </form>
+
+            <p id="message"></p>
+        </section>
+
+        <section class="task-section">
+            <h2>Student Tasks and Tool Work</h2>
+
+            <div id="taskList">
+                <!-- NEW: data-priority added to each sample task -->
+                <article class="task-card" data-priority="High">
+                    <h3>Complete DevOps Assignment</h3>
+                    <p>Complete the Git practical assignment before the deadline.</p>
+                </article>
+
+                <article class="task-card" data-priority="Medium">
+                    <h3>Prepare Presentation</h3>
+                    <p>Prepare presentation slides for the next class.</p>
+                </article>
+
+                <article class="task-card" data-priority="Low">
+                    <h3>Revise Git Concepts</h3>
+                    <p>Review repositories, commits, branches and merging.</p>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>Student Task Management System</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
